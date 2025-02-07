@@ -1,0 +1,14 @@
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Model\bin\Debug\net6.0\Education.Model.deps.json
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Model\bin\Debug\net6.0\Education.Model.runtimeconfig.json
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Model\bin\Debug\net6.0\Education.Model.dll
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Model\bin\Debug\net6.0\Education.Model.pdb
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Model\obj\Debug\net6.0\Education.Model.csproj.AssemblyReference.cache
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Model\obj\Debug\net6.0\Education.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Model\obj\Debug\net6.0\Education.Model.AssemblyInfoInputs.cache
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Model\obj\Debug\net6.0\Education.Model.AssemblyInfo.cs
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Model\obj\Debug\net6.0\Education.Model.csproj.CoreCompileInputs.cache
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Model\obj\Debug\net6.0\Education.Model.dll
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Model\obj\Debug\net6.0\refint\Education.Model.dll
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Model\obj\Debug\net6.0\Education.Model.pdb
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Model\obj\Debug\net6.0\Education.Model.genruntimeconfig.cache
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Model\obj\Debug\net6.0\ref\Education.Model.dll

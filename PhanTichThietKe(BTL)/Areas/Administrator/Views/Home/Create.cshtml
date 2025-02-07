@@ -1,0 +1,38 @@
+﻿@model Education.Model.Entities.User
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="content mb-5">
+    <div class="card-body">
+        <h5 class="card-title">Thêm người dùng</h5>
+        <form asp-action="Create" asp-controller="Home" method="post" class="row g-3">
+            <div class="col-md-6">
+                <label asp-for="Id" class="form-label">Mã người dùng</label>
+                <input asp-for="Id" class="form-control" />
+            </div>
+            <div class="col-md-6">
+                <label asp-for="TenDangNhap" class="form-label">Tên đăng nhập</label>
+                <input asp-for="TenDangNhap" class="form-control" />
+            </div>
+            <div class="col-md-6">
+                <label asp-for="MatKhau" class="form-label">Mật khẩu</label>
+                <input asp-for="MatKhau" class="form-control" />
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="UserType" class="form-label">Loại người dùng</label>
+                <input asp-for="UserType" class="form-control" />
+            </div>
+            
+
+            <div class="col-12 text-center mt-2">
+                <button type="submit" class="btn btn-primary">Thêm mới</button>
+                <button type="button" onclick="window.location.href='/Administrator/Home/Index'" class="btn btn-secondary">Hủy</button>
+            </div>
+        </form>
+    </div>
+</div>

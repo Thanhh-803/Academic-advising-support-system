@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\PhanTichThietKe(BTL).props" />
+</Project>

@@ -1,0 +1,69 @@
+﻿@model List<Education.Model.Entities.KetQuaHocTap>
+@{
+    ViewData["Title"] = "Grade";
+    Layout = "~/Areas/HoTroCoVan/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- Body Start -->
+<div class="container bg-white col-sm-12 mb-5 ">
+    <div class="content mb-5">
+        <h1 class="mb-5" style="text-align:center"><b>Quản lý điểm</b></h1>
+        <!-- Table Start -->
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-12">
+                    <div class="bg-light rounded h-100 p-4">
+                        <h3 class="mb-4">Danh sách điểm của sinh viên</h3>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Mã sinh viên</th>
+                                        <th scope="col">Họ tên</th>
+                                        <th scope="col">Tên môn học</th>
+                                        <th scope="col">Điểm chuyên cần</th>
+                                        <th scope="col">Kiểm tra 1</th>
+                                        <th scope="col">Kiểm tra 2</th>
+                                        <th scope="col">Điểm thi</th>
+                                        <th scope="col">Điểm trung bình</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr style="text-align:center">
+                                            <td>@item.MaSinhVien</td>
+                                            <td>@item.tenSV</td>
+                                            <td>@item.tenMH</td>
+                                            <td>@item.DiemChuyenCan</td>
+                                            <td>@item.DiemKt1</td>
+                                            <td>@item.DiemKt2</td>
+                                            <td>@item.DiemThi</td>
+                                            <td>@item.DiemTrungBinh</td>
+                                            <td>
+                                                <a href="/HoTroCoVan/KetQuaHocTap/Edit/@item.MaSinhVien">
+                                                    <button type="button" class="btn btn-square btn-outline-primary m-2">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                </a>
+                                                <a href="/HoTroCoVan/KetQuaHocTap/Delete/@item.MaSinhVien" class="btn btn-square btn-outline-danger m-2">
+                                                    Xóa
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <a href="/HoTroCoVan/KetQuaHocTap/CreateGrade" class="btn btn-primary mb-2" style="text-align:left;">Thêm mới</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Table End -->
+    </div>
+</div>
+<!-- Body End -->

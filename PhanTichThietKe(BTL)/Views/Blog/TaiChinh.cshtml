@@ -1,0 +1,64 @@
+﻿@model List<Education.Model.Entities.HocPhi>
+@{
+    ViewData["Title"] = "TaiChinh";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    decimal tongHocPhi = 0; // Khai báo biến tổng học phí
+    decimal tongHocPhiDaNop = 0; // Khai báo biến tổng học phí đã nộp
+
+    foreach (var item in Model)
+    {
+        tongHocPhi += item.MucHocPhi ?? 0; // Sử dụng null-coalescing operator để xử lý giá trị null
+        tongHocPhiDaNop += item.HocPhiDaNop ?? 0; // Sử dụng null-coalescing operator để xử lý giá trị null
+    }
+}
+
+
+<section class="hero-wrap hero-wrap-2" style="background-image: none;">
+    <div class="overlay"></div>
+
+    <div class="row no-gutters slider-text align-items-end justify-content-center mt-auto">
+        <div class="ftco-animate pb-5 text-center  mt-5">
+            <h1 class="mb-0 bread">Thông tin tài chính</h1>
+            <div class="container-fluid pt-4 px-4" style="width:100%;">
+                <div class="bg-light text-center rounded p-4" >
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <h6 class="mb-0" >Tổng số tiền phải nộp: @tongHocPhi <span>đ</span></h6>
+                        <h6 class="mb-0">Tổng số tiền đã nộp: @tongHocPhiDaNop <span>đ</span></h6>
+                        <h6 class="mb-0">Thừa/Thiếu: @(tongHocPhiDaNop - tongHocPhi) <span>đ</span></h6>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table text-start align-middle table-bordered table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Học kỳ</th>
+                                    <th scope="col">Năm học</th>
+                                    <th scope="col">Mực học phí <span>đ</span></th>
+                                    <th scope="col">Số tiền phải nộp <span>đ</span></th>
+                                    <th scope="col">Số tiền đã nộp <span>đ</span></th>
+                                    <th scope="col">Thừa/ Thiếu <span>đ</span></th>
+                                    <th scope="col">Ghi chú</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.Ki</td>
+                                        <td>@item.NamHoc</td>
+                                        <td>@item.MucHocPhi</td>
+                                        <td>@item.MucHocPhi</td>
+                                        <td>@item.HocPhiDaNop</td>
+                                        <td>@(item.HocPhiDaNop - item.MucHocPhi)</td>
+                                        <td></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

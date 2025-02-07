@@ -1,0 +1,64 @@
+﻿@model List<Education.Model.Entities.Blog>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .align-left {
+        float: left;
+        margin-right: 10px;
+    }
+</style>
+
+<!-- Recent Sales Start -->
+<div class="container-fluid pt-4 px-4">
+    <div class="bg-light text-center rounded p-4">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h6 class="mb-0">Quản lý Page</h6>
+            <a href="">Show All</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+                <thead>
+                    <tr class="text-dark" style="text-align:center;">
+                        <th scope="col">Stt</th>
+                        <th scope="col">Tên Page</th>
+                        <th scope="col">Nội dung</th>
+                        <th scope="col">Hình ảnh</th>
+                        <th scope="col">Người tạo</th>
+                        <th scope="col">Ngày tạo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Name</td>
+                            <td>@item.Content</td>
+                            <td>@item.Image</td>
+                            <td>@item.CreateBy</td>
+                            <td>@item.CreateDate</td>
+                            <td>
+                                <a href="/Administrator/Blog/Edit/@item.Id">
+                                    <button type="button" class="btn btn-square btn-outline-primary m-2">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                </a>
+                                <a href="/Administrator/Blog/Delete/@item.Id" class="btn btn-square btn-outline-danger m-2">
+                                    Xóa
+                                </a>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+            <div class="mb-3 mt-3">
+                <a href="/Administrator/Blog/Create" class="btn btn-primary align-left">Thêm mới</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Recent Sales End -->

@@ -1,0 +1,40 @@
+﻿@model Education.Model.Entities.PhieuRenLuyen
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/HoTroCoVan/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content mb-5">
+    <div class="card-body">
+        <h5 class="card-title">Thêm điểm rèn luyện cho sinh viên</h5>
+        <form asp-action="Create" asp-controller="PhieuRenLuyen" method="post" class="row g-3">
+            <div class="col-md-6">
+                <label asp-for="NamHoc" class="form-label">Năm Học</label>
+                <input asp-for="NamHoc" class="form-control" />
+            </div>
+            <div class="col-md-6">
+                <label asp-for="MaSinhVien" class="form-label">Mã Sinh Viên</label>
+                <input asp-for="MaSinhVien" class="form-control" />
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="HoTen" class="form-label">Tên sinh viên</label>
+                <input asp-for="HoTen" class="form-control" />
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Ki1" class="form-label">Kì 1</label>
+                <input asp-for="Ki1" class="form-control" />
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Ki2" class="form-label">Kì 2</label>
+                <input asp-for="Ki2" class="form-control" />
+            </div>
+
+            <div class="col-12 text-center mt-2">
+                <button type="submit" class="btn btn-primary">Thêm mới</button>
+                <button type="button" onclick="window.location.href='/HoTroCoVan/PhieuRenLuyen/Index'" class="btn btn-secondary">Hủy</button>
+            </div>
+        </form>
+    </div>
+</div>
+

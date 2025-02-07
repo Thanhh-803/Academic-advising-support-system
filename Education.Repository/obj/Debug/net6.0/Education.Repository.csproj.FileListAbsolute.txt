@@ -1,0 +1,17 @@
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Repository\bin\Debug\net6.0\Education.Repository.deps.json
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Repository\bin\Debug\net6.0\Education.Repository.dll
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Repository\bin\Debug\net6.0\Education.Repository.pdb
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Repository\bin\Debug\net6.0\Education.IRepository.dll
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Repository\bin\Debug\net6.0\Education.IRepository.pdb
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Repository\obj\Debug\net6.0\Education.Repository.csproj.AssemblyReference.cache
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Repository\obj\Debug\net6.0\Education.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Repository\obj\Debug\net6.0\Education.Repository.AssemblyInfoInputs.cache
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Repository\obj\Debug\net6.0\Education.Repository.AssemblyInfo.cs
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Repository\obj\Debug\net6.0\Education.Repository.csproj.CoreCompileInputs.cache
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Repository\obj\Debug\net6.0\Education.Repository.csproj.CopyComplete
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Repository\obj\Debug\net6.0\Education.Repository.dll
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Repository\obj\Debug\net6.0\refint\Education.Repository.dll
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Repository\obj\Debug\net6.0\Education.Repository.pdb
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Repository\obj\Debug\net6.0\ref\Education.Repository.dll
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Repository\bin\Debug\net6.0\Education.Model.dll
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.Repository\bin\Debug\net6.0\Education.Model.pdb

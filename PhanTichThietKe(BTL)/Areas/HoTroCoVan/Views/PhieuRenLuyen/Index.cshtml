@@ -1,0 +1,113 @@
+﻿@model List<Education.Model.Entities.PhieuRenLuyen>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/HoTroCoVan/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    var namHocFilter = ViewData["NamHocFilter"] as string;
+}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        const namhocFilter = $('#namhoc-filter');
+        const label = $('label[for="namhoc-filter"]');
+
+        namhocFilter.val('@namHocFilter');
+
+        namhocFilter.change(function () {
+            const selectedNamHoc = $(this).val();
+            window.location.href = '@Url.Action("Index", "PhieuRenLuyen")' + '?namHoc=' + selectedNamHoc;
+        });
+
+        namhocFilter.change(function () {
+            label.text('Năm học: ' + namhocFilter.val());
+        });
+    });
+</script>
+
+<!-- Recent Sales Start -->
+<div class="container-fluid pt-4 px-4">
+    <h1 class="mb-5" style="text-align:center"><b>Quản lý điểm rèn luyện của sinh viên</b></h1>
+    <div class="mb-0">
+        <label for="namhoc-filter" class="form-label"><b>Năm học: </b></label>
+        <select id="namhoc-filter" class="text-dark">
+            <option value=""></option>
+            <option value="2021-2022">2021-2022</option>
+            <option value="2022-2023">2022-2023</option>
+            <option value="2023-2024">2023-2024</option>
+            <option value="2024-2025">2024-2025</option>
+        </select>
+    </div>
+    <div class="bg-light rounded p-4">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h6 class="mb-0">Danh sách điểm rèn luyện của sinh viên</h6>
+        </div>
+        <div class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+                <thead>
+                    <tr class="text-dark">
+                        <th scope="col">Năm học</th>
+                        <th scope="col">Mã sinh viên</th>
+                        <th scope="col">Tên sinh viên</th>
+                        <th scope="col">Kì 1</th>
+                        <th scope="col">Kì 2</th>
+                        
+                        <th scope="col">Tổng</th>
+                        <th scope="col">Xếp Loại</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        float diemKy1;
+                        float diemKy2;
+
+                        if (float.TryParse(item.Ki1, out diemKy1) && float.TryParse(item.Ki2, out diemKy2))
+                        {
+                            float tongDiemHaiKi = (diemKy1 * 0.4f) + (diemKy2 * 0.6f);
+                            string xepLoai;
+
+                            if (tongDiemHaiKi > 90)
+                            {
+                                xepLoai = "Xuất sắc";
+                            }
+                            else if (tongDiemHaiKi >= 85)
+                            {
+                                xepLoai = "Giỏi";
+                            }
+                            else if (tongDiemHaiKi >= 75)
+                            {
+                                xepLoai = "Khá";
+                            }
+                            else if (tongDiemHaiKi >= 60)
+                            {
+                                xepLoai = "Trung bình";
+                            }
+                            else
+                            {
+                                xepLoai = "Yếu";
+                            }
+
+                            <tr>
+                                <td>@item.NamHoc</td>
+                                <td>@item.MaSinhVien</td>
+                                <td>@item.HoTen</td>
+                                <td>@item.Ki1</td>
+                                <td>@item.Ki2</td>
+                                
+                                <td>@tongDiemHaiKi</td>
+                                <td>@xepLoai</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+            
+        </div>
+        <a href="/HoTroCoVan/PhieuRenLuyen/Create" class="btn btn-primary mb-5" style="text-align:left;">Thêm mới</a>
+    </div>
+</div>
+<!-- Recent Sales End -->

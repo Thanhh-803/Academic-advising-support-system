@@ -1,0 +1,68 @@
+﻿@model Education.Model.Entities.LichHenTuVan
+@{
+    ViewData["Title"] = "DatLichHen";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<section class="hero-wrap hero-wrap-2" style="background-image: none;">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center">
+            <div class="col-md-12 ftco-animate pb-5 text-center">
+                
+                <h1 class="mb-0 bread">Đặt lịch hẹn</h1>
+                <div class="container-fluid pt-4">
+                    <div class="row g-4" style="text-align:left">
+                        <div class="col-sm-12 col-xl-12">
+                            <div class="bg-light rounded h-100 p-4">
+                                <form asp-action="DatLichHen" asp-controller="LichHen" method="post" class="row g-3">
+                                    <div class="mb-3">
+                                        <label asp-for="MaSinhVien" class="form-label" required>Mã sinh viên *</label>
+                                        <input asp-for="MaSinhVien" class="form-control" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label asp-for="tenSV" class="form-label" required>Tên sinh viên *</label>
+                                        <input asp-for="tenSV" class="form-control" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label asp-for="phone" class="form-label" required>Số điện thoại *</label>
+                                        <input asp-for="phone" class="form-control" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label asp-for="tenGVCN" class="form-label" required>Tên giảng viên *</label>
+                                        <input asp-for="tenGVCN" class="form-control" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label asp-for="NoiDungTuVan" class="form-label" required>Nội dung tư vấn *</label>
+                                        <input asp-for="NoiDungTuVan" class="form-control" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label asp-for="DiaDiem" class="form-label" required>Địa điểm *</label>
+                                        <input asp-for="DiaDiem" class="form-control" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label asp-for="ThoiGian" class="form-label" required>Thời gian *</label>
+                                        <input type="date" asp-for="ThoiGian" class="form-control" required />
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Đặt Lịch</button>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Form End -->
+</section>
+
+
+

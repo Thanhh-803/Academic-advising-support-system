@@ -1,0 +1,65 @@
+﻿@model List<Education.Model.Entities.User>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .align-left {
+        float: left;
+        margin-right: 10px;
+    }
+</style>
+
+<!-- Recent Sales Start -->
+<div class="container-fluid pt-4 px-4">
+    <div class="bg-light text-center rounded p-4">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h6 class="mb-0">Quản lý người dùng</h6>
+            <a href="">Show All</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+                <thead>
+                    <tr class="text-dark">
+                       
+                        <th scope="col">Mã người dùng</th>
+                        <th scope="col">Tên đăng nhập</th>
+                        <th scope="col">Mật khẩu</th>
+                        <th scope="col">Loại người dùng</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var item in Model)
+                    {
+                        <tr>
+
+                            <td>@item.Id</td>
+                            <td>@item.TenDangNhap</td>
+                            <td>@item.MatKhau</td>
+                            <td>@item.UserType</td>
+                            <td>
+                                <a href="/Administrator/Home/Edit/@item.Id">
+                                    <button type="button" class="btn btn-square btn-outline-primary m-2">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                </a>
+                                <a href="/Administrator/Home/Delete/@item.Id" class="btn btn-square btn-outline-danger m-2">
+                                    Xóa
+                                </a>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+            <div class="mb-3 mt-3">
+                <a href="/Administrator/Home/Create" class="btn btn-primary align-left">Thêm mới</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Recent Sales End -->
+
+

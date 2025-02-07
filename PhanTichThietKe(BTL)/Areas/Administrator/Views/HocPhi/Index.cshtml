@@ -1,0 +1,74 @@
+﻿@model List<Education.Model.Entities.HocPhi>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+
+<style>
+    .align-left {
+        float: left;
+        margin-right: 10px;
+    }
+</style>
+
+<!-- Recent Sales Start -->
+<div class="container-fluid pt-4 px-4">
+    <div class="bg-light text-center rounded p-4">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h6 class="mb-0">Quản lý tài chính cho sinh viên</h6>
+            <a href="">Show All</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+                <thead>
+                    <tr class="text-dark">
+
+                        <th scope="col">Mã sinh viên</th>
+                        <th scope="col">Tên sinh viên</th>
+                        <th scope="col">Năm học</th>
+                        <th scope="col">Kỳ</th>
+                        <th scope="col">Học phí</th>
+                       
+                        <th scope="col">Học phí đã nộp </th>
+                        <th scope="col">Thừa/thiếu</th>
+                        <th scope="col">Trang Thái</th>
+
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>@item.MaSinhVien</td>
+                            <td>@item.tenSV</td>
+                            <td>@item.NamHoc</td>
+                            <td>@item.Ki</td>
+                            <td>@item.MucHocPhi</td>
+                            <td>@item.HocPhiDaNop</td>
+                            <td>@item.ThuaThieu</td>
+                            <td>@item.Status</td>
+                            <td>
+                                <a href="/Administrator/Home/Edit/@item.MaSinhVien">
+                                    <button type="button" class="btn btn-square btn-outline-primary m-2">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                </a>
+                                <a href="/Administrator/HocPhi/Delete/@item.MaSinhVien" class="btn btn-square btn-outline-danger m-2">
+                                    Xóa
+                                </a>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+            <div class="mb-3 mt-3">
+                <a href="/Administrator/HocPhi/Create" class="btn btn-primary align-left">Thêm mới</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Recent Sales End -->

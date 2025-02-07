@@ -1,0 +1,38 @@
+﻿@model List<Education.Model.Entities.MonHoc>
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/HoTroCoVan/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Recent Sales Start -->
+<div class="container-fluid pt-4 px-4">
+    <div class="bg-light text-center rounded p-4">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h6 class="mb-0">Danh sách môn học</h6>
+        </div>
+        <div class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+                <thead>
+                    <tr class="text-dark">
+                        <th scope="col">Mã môn học</th>
+                        <th scope="col">Tên môn học</th>
+                        <th scope="col">Số tín chỉ</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var item in Model){
+                    <tr>
+
+                        <td>@item.MaMonHoc</td>
+                        <td>@item.TenMonHoc</td>
+                        <td>@item.SoTinChi</td>
+                        <td><a class="btn btn-sm btn-primary" href="/HoTroCoVan/KetQuaHocTap/Grade/@item.MaMonHoc">Detail</a></td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- Recent Sales End -->

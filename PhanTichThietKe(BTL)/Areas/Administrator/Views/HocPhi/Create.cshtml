@@ -1,0 +1,53 @@
+﻿@model Education.Model.Entities.HocPhi
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content mb-5">
+    <div class="card-body">
+        <h5 class="card-title">Thêm người dùng</h5>
+        <form asp-action="Create" asp-controller="HocPhi" method="post" class="row g-3">
+            <div class="col-md-6">
+                <label asp-for="MaSinhVien" class="form-label">Mã sinh viên</label>
+                <input asp-for="MaSinhVien" class="form-control" />
+            </div>
+            <div class="col-md-6">
+                <label asp-for="tenSV" class="form-label">Tên sinh viên</label>
+                <input asp-for="tenSV" class="form-control" />
+            </div>
+            <div class="col-md-6">
+                <label asp-for="NamHoc" class="form-label">Năm học</label>
+                <input asp-for="NamHoc" class="form-control" />
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Ki" class="form-label">Kỳ học</label>
+                <input asp-for="Ki" class="form-control" />
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="MucHocPhi" class="form-label">Học phí </label>
+                <input asp-for="MucHocPhi" class="form-control" />
+            </div>
+            <div class="col-md-6">
+                <label asp-for="HocPhiDaNop" class="form-label">Học phí đã nộp</label>
+                <input asp-for="HocPhiDaNop" class="form-control" />
+            </div>
+            <div class="col-md-6">
+                <label asp-for="ThuaThieu" class="form-label">Thừa/thiếu</label>
+                <input asp-for="ThuaThieu" class="form-control" />
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Status" class="form-label">Trang thái</label>
+                <input asp-for="Status" class="form-control" />
+            </div>
+
+
+            <div class="col-12 text-center mt-2">
+                <button type="submit" class="btn btn-primary">Thêm mới</button>
+                <button type="button" onclick="window.location.href='/Administrator/HocPhi/Index'" class="btn btn-secondary">Hủy</button>
+            </div>
+        </form>
+    </div>
+</div>
+

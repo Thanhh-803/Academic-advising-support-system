@@ -1,0 +1,15 @@
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.IRepository\bin\Debug\net6.0\Education.IRepository.deps.json
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.IRepository\bin\Debug\net6.0\Education.IRepository.dll
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.IRepository\bin\Debug\net6.0\Education.IRepository.pdb
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.IRepository\obj\Debug\net6.0\Education.IRepository.csproj.AssemblyReference.cache
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.IRepository\obj\Debug\net6.0\Education.IRepository.GeneratedMSBuildEditorConfig.editorconfig
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.IRepository\obj\Debug\net6.0\Education.IRepository.AssemblyInfoInputs.cache
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.IRepository\obj\Debug\net6.0\Education.IRepository.AssemblyInfo.cs
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.IRepository\obj\Debug\net6.0\Education.IRepository.csproj.CoreCompileInputs.cache
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.IRepository\obj\Debug\net6.0\Education.IRepository.dll
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.IRepository\obj\Debug\net6.0\refint\Education.IRepository.dll
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.IRepository\obj\Debug\net6.0\Education.IRepository.pdb
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.IRepository\obj\Debug\net6.0\ref\Education.IRepository.dll
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.IRepository\bin\Debug\net6.0\Education.Model.dll
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.IRepository\bin\Debug\net6.0\Education.Model.pdb
+D:\TTCNTT4\Phân tích thiết kế hệ thống\PhanTichThietKe(BTL)\Education.IRepository\obj\Debug\net6.0\Education.IRepository.csproj.CopyComplete

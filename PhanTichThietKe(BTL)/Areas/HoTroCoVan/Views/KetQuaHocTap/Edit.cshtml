@@ -1,0 +1,57 @@
+﻿@model Education.Model.Entities.KetQuaHocTap
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/HoTroCoVan/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content mb-5">
+    <div class="card-body">
+        <h5 class="card-title">Cập nhật điểm cho sinh viên</h5>
+        <form asp-action="Edit" asp-controller="KetQuaHocTap" method="post" class="row g-3">
+            <div class="col-md-6">
+                <label asp-for="MaSinhVien" class="form-label">Mã sinh viên</label>
+                <input asp-for="MaSinhVien" class="form-control" />
+            </div>
+            <div class="col-md-6">
+                <label asp-for="tenSV" class="form-label">Tên sinh viên</label>
+                <input asp-for="tenSV" class="form-control" />
+            </div>
+            @*<div class="col-md-6">
+            <label asp-for="User_id" class="form-label">Mã người dùng</label>
+            <input asp-for="User_id" class="form-control" />
+            </div>*@
+            <div class="col-md-6">
+                <label asp-for="MaMh" class="form-label">Mã môn học</label>
+                <input asp-for="MaMh" class="form-control" />
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="DiemChuyenCan" class="form-label">Điểm chuyên cần</label>
+                <input asp-for="DiemChuyenCan" class="form-control" />
+            </div>
+            <div class="col-md-6">
+                <label asp-for="DiemKt1" class="form-label">Kiểm kiểm tra 1</label>
+                <input asp-for="DiemKt1" class="form-control" />
+            </div>
+            <div class="col-md-6">
+                <label asp-for="DiemKt2" class="form-label">Điểm kiểm tra 2</label>
+                <input asp-for="DiemKt2" class="form-control" />
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="DiemThi" class="form-label">Điểm thi</label>
+                <input asp-for="DiemThi" class="form-control" />
+            </div>
+            <div class="col-md-6">
+                <label asp-for="DiemTrungBinh" class="form-label">Điểm trung bình</label>
+                <input asp-for="DiemTrungBinh" class="form-control" />
+            </div>
+
+            <div class="col-12 text-center mt-2">
+                <button type="submit" class="btn btn-primary">Cập nhật</button>
+                <button type="reset" class="btn btn-secondary">Hủy</button>
+            </div>
+        </form>
+    </div>
+</div>
+

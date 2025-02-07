@@ -1,0 +1,60 @@
+﻿@model List<Education.Model.Entities.LichHenTuVan>
+@{
+    ViewData["Title"] = "XemLichHen";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<section class="hero-wrap hero-wrap-2" style="background-image: none;">
+    <div class="overlay"></div>
+
+    <div class="row no-gutters slider-text align-items-end justify-content-center">
+        <div class="ftco-animate pb-5 text-center">
+            <h1 class="mb-0 bread">Lịch hẹn tư vấn</h1>
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-light text-center rounded p-4">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h6 class="mb-0">Xem lịch hẹn tư vấn</h6>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table text-start align-middle table-bordered table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">STT</th>
+                                    <th scope="col">Mã sinh viên</th>
+                                    <th scope="col">Tên sinh viên</th>
+                                    <th scope="col">Số điện thoại</th>
+                                    <th scope="col">Tên Giảng viên</th>
+                                    <th scope="col">Nội dung tư vấn</th>
+                                    <th scope="col">Thời gian</th>
+                                    <th scope="col">Địa điểm</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <th scope="row">@item.Id</th>
+                                        <td>@item.MaSinhVien</td>
+                                        <td>@item.tenSV</td>
+                                        <td>@item.phone</td>
+                                        <td>@item.tenGVCN</td>
+                                        <td>@item.NoiDungTuVan</td>
+                                        <td>@item.ThoiGian</td>
+                                        <td>@item.DiaDiem</td>
+                                        <td>@item.TrangThai</td>
+                                        <td><a class="btn btn-sm btn-primary" href="/LichHen/Delete/@item.Id">Xóa</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>

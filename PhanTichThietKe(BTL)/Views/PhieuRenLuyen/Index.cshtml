@@ -1,0 +1,110 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+
+
+<section class="hero-wrap hero-wrap-2" style="background-image: none;">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center">
+            <div class="col-md-12 ftco-animate pb-5 text-center">
+
+                <div class="container-fluid pt-4 px-4 mt-5">
+                    <h1 class="mb-5" style="text-align:center"><b>Xem điểm rèn luyện của sinh viên</b></h1>
+                    
+                    <div class="bg-light rounded p-4">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <h6 class="mb-0">Xem điểm rèn luyện của sinh viên</h6>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table text-start align-middle table-bordered table-hover mb-0">
+                                <thead>
+                                    <tr class="text-dark">
+                                        <th scope="col">Năm học</th>
+                                        <th scope="col">Mã sinh viên</th>
+                                        <th scope="col">Tên sinh viên</th>
+                                        <th scope="col">Kì 1</th>
+                                        <th scope="col">Kì 2</th>
+                                        <th scope="col">Tổng</th>
+                                        <th scope="col">Xếp Loại</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                        float diemKy1 = 80;
+                                        float diemKy2 = 85;
+
+                                        if (diemKy1 != null && diemKy2 != null)
+                                        {
+                                            float tongDiemHaiKi = (diemKy1 * 0.4f) + (diemKy2 * 0.6f);
+                                            string xepLoai;
+
+                                            if (tongDiemHaiKi > 90)
+                                            {
+                                                xepLoai = "Xuất sắc";
+                                            }
+                                            else if (tongDiemHaiKi >= 85)
+                                            {
+                                                xepLoai = "Giỏi";
+                                            }
+                                            else if (tongDiemHaiKi >= 75)
+                                            {
+                                                xepLoai = "Khá";
+                                            }
+                                            else if (tongDiemHaiKi >= 60)
+                                            {
+                                                xepLoai = "Trung bình";
+                                            }
+                                            else
+                                            {
+                                                xepLoai = "Yếu";
+                                            }
+                                            <tr>
+                                                <td>2021-2022</td>
+                                                <td>1571020232</td>
+                                                <td>Trần Thị Thanh</td>
+                                                <td>@diemKy1</td>
+                                                <td>@diemKy2</td>
+                                                <td>@tongDiemHaiKi</td>
+                                                <td>@xepLoai</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2022-2023</td>
+                                                <td>1571020232</td>
+                                                <td>Trần Thị Thanh</td>
+                                                <td>@diemKy1</td>
+                                                <td>@diemKy2</td>
+                                                <td>@tongDiemHaiKi</td>
+                                                <td>@xepLoai</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2023-2024</td>
+                                                <td>1571020232</td>
+                                                <td>Trần Thị Thanh</td>
+                                                <td>@diemKy1</td>
+                                                <td>@diemKy2</td>
+                                                <td>@tongDiemHaiKi</td>
+                                                <td>@xepLoai</td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+           </div>
+        </div>
+    </div>
+
+
+    <!-- Form End -->
+</section>
